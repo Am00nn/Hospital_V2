@@ -13,6 +13,7 @@ namespace Hospital_V2.Services
         public PatientService(IPatientRepository patientRepository, IBookingRepository bookingRepository)
         {
             _patientRepository = patientRepository;
+
             _bookingRepository = bookingRepository;
         }
 
@@ -61,33 +62,6 @@ namespace Hospital_V2.Services
             }
         }
 
-        // Retrieves all appointments for a specific patient
-        public IEnumerable<Booking> GetPatientAppointments(int patientId)
-        {
-            try
-            {
-                // Validate the patient ID
-                if (patientId <= 0)
-                {
-                    throw new ArgumentException("Invalid patient ID."); // Invalid input error
-                }
 
-                // Fetch all appointments for the specified patient
-                var appointments = _bookingRepository.ViewAppointmentByPatient(patientId);
-
-                // Check if there are no appointments
-                if (appointments == null || !appointments.Any())
-                {
-                    throw new InvalidOperationException("No appointments found for the specified patient.");
-                }
-
-                return appointments; // Return the list of appointments
-            }
-            catch (Exception ex)
-            {
-                // Handle errors during retrieval
-                throw new InvalidOperationException($"Error while retrieving patient appointments: {ex.Message}");
-            }
-        }
     }
 }

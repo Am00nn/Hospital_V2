@@ -1,0 +1,132 @@
+[
+  {
+    "ContainingType": "Hospital_V2.Controllers.AppointmentController",
+    "Method": "BookAppointment",
+    "RelativePath": "api/Appointment/BookAppointment",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "patientName",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "clinicName",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "bookingDate",
+        "Type": "System.DateTime",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Hospital_V2.Controllers.AppointmentController",
+    "Method": "GetByClinic",
+    "RelativePath": "api/Appointment/GetByClinic/{clinicName}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "clinicName",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Hospital_V2.Controllers.AppointmentController",
+    "Method": "GetByPatient",
+    "RelativePath": "api/Appointment/GetByPatient/{patientName}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "patientName",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Hospital_V2.Controllers.ClinicController",
+    "Method": "AddClinic",
+    "RelativePath": "api/Clinic/AddClinic",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "c_Name",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "c_Specialization",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "numberOfSlots",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Hospital_V2.Controllers.ClinicController",
+    "Method": "GetAllClinics",
+    "RelativePath": "api/Clinic/GetAllClinics",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Hospital_V2.Controllers.PatientController",
+    "Method": "AddPatient",
+    "RelativePath": "api/Patient/AddPatient",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "p_Name",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "p_Age",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "p_Gender",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Hospital_V2.Controllers.PatientController",
+    "Method": "GetAllPatients",
+    "RelativePath": "api/Patient/GetAllPatients",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  }
+]

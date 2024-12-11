@@ -71,5 +71,10 @@ namespace Hospital_V2.Services
                 throw new InvalidOperationException($"Error adding clinic: {ex.Message}");
             }
         }
+
+        public void UpdateClinic(Clinic clinic)
+        {
+            _clinicRepository.UpdateClinic(clinic);
+        }
     }
 }

@@ -74,34 +74,6 @@ namespace Hospital_V2.Controllers
             }
         }
 
-        // Retrieves all appointments for a specific patient
-        [HttpGet("GetAppointmentsByPatient/{patientId}")]
-        public IActionResult GetAppointmentsByPatient(int patientId)
-        {
-            try
-            {
-                // Validate patient ID
-                if (patientId <= 0)
-                {
-                    return BadRequest("Invalid patient ID.");
-                }
 
-                // Get appointments
-                var appointments = _patientService.GetPatientAppointments(patientId);
-
-                // Check if no appointments are found
-                if (appointments == null || !appointments.Any())
-                {
-                    return NotFound("No appointments found for the specified patient.");
-                }
-
-                return Ok(appointments); // Return the list of appointments
-            }
-            catch (Exception ex)
-            {
-                // Handle unexpected errors
-                return StatusCode(500, $"An error occurred while retrieving appointments: {ex.Message}");
-            }
-        }
     }
 }

@@ -1,39 +1,34 @@
 ﻿using Hospital_V2.Models;
 using Hospital_V2.Repositories;
+using Hospital_V2.Services;
 
 namespace Hospital_V2.Services
 {
     public class AppointmentServices : IAppointmentServices
     {
         private readonly IBookingRepository _bookingRepository;
+        private readonly IClinicService _clinicService;
+        private readonly IPatientService _patientService;
 
-        private readonly IClinicRepository _clinicRepository;
-
-        private readonly IPatientRepository _patientRepository;
-
-        public AppointmentServices(IBookingRepository bookingRepository, IClinicRepository clinicRepository, IPatientRepository patientRepository)
+        public AppointmentServices(IBookingRepository bookingRepository, IClinicService clinicService, IPatientService patientService)
         {
             _bookingRepository = bookingRepository;
-
-            _clinicRepository = clinicRepository;
-
-            _patientRepository = patientRepository;
+            _clinicService = clinicService;
+            _patientService = patientService;
         }
 
         public string AddBooking(string patientName, string clinicName, DateTime bookingDate)
         {
             try
             {
-                // Find patient and clinic using LINQ
-
-                var patient = _patientRepository.GetPatients()
+                // Retrieve patient and clinic using services
+                var patient = _patientService.GetAllPatients()
                     .FirstOrDefault(p => p.P_Name.Equals(patientName, StringComparison.OrdinalIgnoreCase));
 
-                var clinic = _clinicRepository.GetClinics()
+                var clinic = _clinicService.GetAllClinics()
                     .FirstOrDefault(c => c.C_Name.Equals(clinicName, StringComparison.OrdinalIgnoreCase));
 
                 // Validate patient and clinic
-
                 if (patient == null)
                     return "Invalid patient name.";
 
@@ -41,7 +36,6 @@ namespace Hospital_V2.Services
                     return "Invalid clinic name.";
 
                 // Check if patient already has an appointment on the same date
-
                 var existingAppointment = _bookingRepository.ViewAppointmentByPatient(patient.P_Id)
                     .Any(b => b.BookingDate.Date == bookingDate.Date && b.ClinicId == clinic.CID);
 
@@ -49,7 +43,6 @@ namespace Hospital_V2.Services
                     return "Patient already has an appointment in this clinic on the same day.";
 
                 // Check if the clinic has available slots
-
                 if (clinic.NumberOfSlots <= 0)
                     return "No available slots in the clinic.";
 
@@ -64,17 +57,14 @@ namespace Hospital_V2.Services
                 _bookingRepository.BookAppointment(booking);
 
                 // Update the clinic's available slots
-
                 clinic.NumberOfSlots -= 1;
-
-                _clinicRepository.UpdateClinic(clinic);
+                _clinicService.UpdateClinic(clinic);
 
                 return $"Booking successful. Remaining slots: {clinic.NumberOfSlots}";
             }
             catch (Exception ex)
             {
                 // Handle unexpected errors
-
                 return $"An error occurred while booking the appointment: {ex.Message}";
             }
         }
@@ -83,7 +73,7 @@ namespace Hospital_V2.Services
         {
             try
             {
-                var clinic = _clinicRepository.GetClinics()
+                var clinic = _clinicService.GetAllClinics()
                     .FirstOrDefault(c => c.C_Name.Equals(clinicName, StringComparison.OrdinalIgnoreCase));
 
                 if (clinic == null)
@@ -96,7 +86,6 @@ namespace Hospital_V2.Services
             catch (Exception ex)
             {
                 // Handle unexpected errors
-
                 throw new InvalidOperationException($"An error occurred while retrieving appointments: {ex.Message}");
             }
         }
@@ -105,7 +94,7 @@ namespace Hospital_V2.Services
         {
             try
             {
-                var patient = _patientRepository.GetPatients()
+                var patient = _patientService.GetAllPatients()
                     .FirstOrDefault(p => p.P_Name.Equals(patientName, StringComparison.OrdinalIgnoreCase));
 
                 if (patient == null)
@@ -118,7 +107,6 @@ namespace Hospital_V2.Services
             catch (Exception ex)
             {
                 // Handle unexpected errors
-
                 throw new InvalidOperationException($"An error occurred while retrieving patient appointments: {ex.Message}");
             }
         }

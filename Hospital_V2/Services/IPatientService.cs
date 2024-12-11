@@ -6,6 +6,5 @@ namespace Hospital_V2.Services
     {
         void AddPatient(Patient patient);
         IEnumerable<Patient> GetAllPatients();
-        IEnumerable<Booking> GetPatientAppointments(int patientId);
     }
 }

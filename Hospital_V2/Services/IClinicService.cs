@@ -6,5 +6,6 @@ namespace Hospital_V2.Services
     {
         void AddClinic(Clinic clinic);
         IEnumerable<Clinic> GetAllClinics();
+        void UpdateClinic(Clinic clinic);
     }
 }

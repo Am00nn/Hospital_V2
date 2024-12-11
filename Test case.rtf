@@ -1,0 +1,274 @@
+{\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1033{\fonttbl{\f0\fnil\fcharset0 Calibri;}{\f1\fnil\fcharset2 Symbol;}}
+{\colortbl ;\red255\green0\blue0;\red0\green128\blue64;\red0\green128\blue0;\red0\green0\blue255;\red0\green176\blue80;}
+{\*\generator Riched20 10.0.22000}\viewkind4\uc1 
+\pard\sa200\sl276\slmult1\cf1\b\f0\fs22\lang9 *Test Scenarios for PatientController\par
+\cf0\b0 Here are the test scenarios for the PatientController methods, including valid cases, invalid inputs, and error handling.\par
+\par
+\cf1\b 1. GetAllPatients\par
+\cf2 Scenario 1: Patients Exist\cf0\b0\par
+
+\pard{\pntext\f1\'B7\tab}{\*\pn\pnlvlblt\pnf1\pnindent0{\pntxtb\'B7}}\fi-360\li720\sa200\sl276\slmult1 Input: No input required.\par
+{\pntext\f1\'B7\tab}Expected Outcome: Returns 200 OK with a list of patients.\par
+
+\pard\sa200\sl276\slmult1\cf2\b\par
+Scenario 2: No Patients Found\cf0\b0\par
+Input: No input required.\par
+Expected Outcome: Returns 404 Not Found with the message "No patients found."\par
+\cf2\b Scenario 3: Unexpected Error\cf0\b0\par
+
+\pard{\pntext\f1\'B7\tab}{\*\pn\pnlvlblt\pnf1\pnindent0{\pntxtb\'B7}}\fi-360\li720\sa200\sl276\slmult1 Input: Simulate an exception in the service layer.\par
+{\pntext\f1\'B7\tab}Expected Outcome: Returns 500 Internal Server Error with an appropriate error message.\par
+
+\pard\sa200\sl276\slmult1\cf1\b\par
+2. AddPatient\cf0\b0\par
+\cf3\b Scenario 1: Valid Input\cf0\b0\par
+
+\pard{\pntext\f1\'B7\tab}{\*\pn\pnlvlblt\pnf1\pnindent0{\pntxtb\'B7}}\fi-360\li720\sa200\sl276\slmult1 Input: Valid p_Name ="Amani" , p_Age "25 " , and p_Gender=  "female" .\par
+{\pntext\f1\'B7\tab}Expected Outcome: Returns 200 OK with the message "Patient added successfully."\par
+{\pntext\f1\'B7\tab}Result : Returns 200 OK with the message "Patient added successfully\par
+
+\pard\sa200\sl276\slmult1\cf3\b Scenario 2: Missing Name\cf0\b0\par
+
+\pard{\pntext\f1\'B7\tab}{\*\pn\pnlvlblt\pnf1\pnindent0{\pntxtb\'B7}}\fi-360\li720\sa200\sl276\slmult1 Input: Empty or whitespace p_Name, valid p_Age, and p_Gender.\par
+{\pntext\f1\'B7\tab}Expected Outcome: Returns 400 Bad Request with the message "Invalid input: Name, Age, and Gender are required."\par
+{\pntext\f1\'B7\tab}Result :\par
+
+\pard\sa200\sl276\slmult1\{\par
+  "type": "{{\field{\*\fldinst{HYPERLINK https://tools.ietf.org/html/rfc9110#section-15.5.1 }}{\fldrslt{https://tools.ietf.org/html/rfc9110#section-15.5.1\ul0\cf0}}}}\f0\fs22 ",\par
+  "title": "One or more validation errors occurred.",\par
+  "status": 400,\par
+  "errors": \{\par
+    "p_Name": [\par
+      \cf1 "The p_Name field is required."\par
+\cf0     ]\par
+  \},\par
+  "traceId": "00-9e36ba93f0c2a422f9cebe99ba1124ab-1db4ec9c5ae9e9ff-00"\par
+\} \par
+
+\pard\sa200\sl276\slmult1\par
+\cf3\b Scenario 3: Missing Age\cf0\b0\par
+
+\pard{\pntext\f1\'B7\tab}{\*\pn\pnlvlblt\pnf1\pnindent0{\pntxtb\'B7}}\fi-360\li720\sa200\sl276\slmult1 Input: Valid p_Name, empty or whitespace p_Age, and valid p_Gender.\par
+{\pntext\f1\'B7\tab}Expected Outcome: Returns 400 Bad Request with the message "Invalid input: Name, Age, and Gender are required."\par
+
+\pard\sa200\sl276\slmult1\par
+\cf3\b Scenario 4: Missing Gender\cf0\b0\par
+
+\pard{\pntext\f1\'B7\tab}{\*\pn\pnlvlblt\pnf1\pnindent0{\pntxtb\'B7}}\fi-360\li720\sa200\sl276\slmult1 Input: Valid p_Name and p_Age, empty or whitespace p_Gender.\par
+{\pntext\f1\'B7\tab}Expected Outcome: Returns 400 Bad Request with the message "Invalid input: Name, Age, and Gender are required."\par
+
+\pard\sa200\sl276\slmult1 result :  \par
+"status": 400,\par
+  "errors": \{\par
+    "p_Gender": [\par
+      "\cf1 The p_Gender field is required\cf0 ."\par
+    ]\par
+
+\pard\sa200\sl276\slmult1\par
+\cf3\b Scenario 5: Unexpected Error\cf0\b0\par
+
+\pard{\pntext\f1\'B7\tab}{\*\pn\pnlvlblt\pnf1\pnindent0{\pntxtb\'B7}}\fi-360\li720\sa200\sl276\slmult1 Input: Valid input but simulate an exception in the service layer.\par
+{\pntext\f1\'B7\tab}Expected Outcome: Returns 500 Internal Server Error with an appropriate error message.\par
+
+\pard\sa200\sl276\slmult1\cf3\b Scenario 4: Unexpected Error\par
+
+\pard{\pntext\f1\'B7\tab}{\*\pn\pnlvlblt\pnf1\pnindent0{\pntxtb\'B7}}\fi-360\li720\sa200\sl276\slmult1\cf0\b0 Input: Valid patientId but simulate an exception in the service layer.\par
+{\pntext\f1\'B7\tab}Expected Outcome: Returns 500 Internal Server Error with an appropriate error message.\par
+
+\pard\sa200\sl276\slmult1\par
+**********************************************************************************\par
+\par
+\par
+\cf1\b * Test Scenarios for ClinicController\par
+1. GetAllClinics\cf0\b0\par
+\cf3\b Scenario 1: Clinics Exist\cf0\b0\par
+
+\pard{\pntext\f1\'B7\tab}{\*\pn\pnlvlblt\pnf1\pnindent0{\pntxtb\'B7}}\fi-360\li720\sa200\sl276\slmult1 Input: No input needed.\par
+{\pntext\f1\'B7\tab}Expected Outcome: Returns 200 OK with a list of clinics.\par
+
+\pard\sa200\sl276\slmult1\cf3\b Scenario 2: No Clinics Found\cf0\b0\par
+
+\pard{\pntext\f1\'B7\tab}{\*\pn\pnlvlblt\pnf1\pnindent0{\pntxtb\'B7}}\fi-360\li720\sa200\sl276\slmult1 Input: No input needed.\par
+{\pntext\f1\'B7\tab}Expected Outcome: Returns 404 Not Found with the message "No clinics found."\par
+
+\pard\sa200\sl276\slmult1\cf3\b Scenario 3: Unexpected Error\cf0\b0\par
+
+\pard{\pntext\f1\'B7\tab}{\*\pn\pnlvlblt\pnf1\pnindent0{\pntxtb\'B7}}\fi-360\li720\sa200\sl276\slmult1 Input: Simulate an exception in the service layer.\par
+{\pntext\f1\'B7\tab}Expected Outcome: Returns 500 Internal Server Error with an appropriate error message.\par
+
+\pard\sa200\sl276\slmult1\cf1\b 2. AddClinic\cf0\b0\par
+\cf3\b Scenario 1: Valid Input\cf0\b0\par
+
+\pard{\pntext\f1\'B7\tab}{\*\pn\pnlvlblt\pnf1\pnindent0{\pntxtb\'B7}}\fi-360\li720\sa200\sl276\slmult1 Input: Valid c_Name = "Eye Clinic " , c_Specialization ="Eye " , and numberOfSlots =20.\par
+{\pntext\f1\'B7\tab}Expected Outcome: Returns 200 OK with the message "Clinic added successfully."\par
+{\pntext\f1\'B7\tab}Result : Clinic added successfully.\par
+
+\pard\sa200\sl276\slmult1\par
+\cf3\b Scenario 2: Missing Clinic Name\cf0\b0\par
+
+\pard{\pntext\f1\'B7\tab}{\*\pn\pnlvlblt\pnf1\pnindent0{\pntxtb\'B7}}\fi-360\li720\sa200\sl276\slmult1 Input: Empty or whitespace c_Name.\par
+{\pntext\f1\'B7\tab}Expected Outcome: Returns 400 Bad Request with the message "Clinic name and specialization are required."\par
+
+\pard\sa200\sl276\slmult1 result :   \par
+"status": 400,\par
+  "errors": \{\par
+    "c_Name": [\par
+      "\cf1 The c_Name field is required\cf0 ."\par
+    ]\par
+
+\pard\sa200\sl276\slmult1\par
+\cf3\b Scenario 3: Missing Clinic Specialization\cf0\b0\par
+
+\pard{\pntext\f1\'B7\tab}{\*\pn\pnlvlblt\pnf1\pnindent0{\pntxtb\'B7}}\fi-360\li720\sa200\sl276\slmult1 Input: Empty or whitespace c_Specialization.\par
+{\pntext\f1\'B7\tab}Expected Outcome: Returns 400 Bad Request with the message "Clinic name and specialization are required."\par
+{\pntext\f1\'B7\tab}result :\par
+
+\pard\sa200\sl276\slmult1  "status": 400,\par
+  "errors": \{\par
+    "c_Specialization": [\cf1\par
+      "The c_Specialization field is required."\par
+\cf0     ]\par
+
+\pard\sa200\sl276\slmult1\par
+\cf3\b Scenario 4: Invalid Number of Slots\cf0\b0\par
+
+\pard{\pntext\f1\'B7\tab}{\*\pn\pnlvlblt\pnf1\pnindent0{\pntxtb\'B7}}\fi-360\li720\sa200\sl276\slmult1 Input: numberOfSlots <= 0.\par
+{\pntext\f1\'B7\tab}Expected Outcome: Returns 400 Bad Request with the message "Number of slots must be greater than zero."\par
+{\pntext\f1\'B7\tab}Result : Number of slots must be greater than zero. \par
+
+\pard\sa200\sl276\slmult1\par
+\cf3\b Scenario 5: Unexpected Error\cf0\b0\par
+
+\pard{\pntext\f1\'B7\tab}{\*\pn\pnlvlblt\pnf1\pnindent0{\pntxtb\'B7}}\fi-360\li720\sa200\sl276\slmult1 Input: Simulate an exception in the service layer.\par
+{\pntext\f1\'B7\tab}Expected Outcome: Returns 500 Internal Server Error with an appropriate error message.\par
+
+\pard\sa200\sl276\slmult1 **********************************************************************************\par
+\cf1\b AppointmentController Test Scenarios\cf0\b0\par
+\cf5\b BookAppointment\cf0\b0\par
+Valid Input:\par
+
+\pard{\pntext\f1\'B7\tab}{\*\pn\pnlvlblt\pnf1\pnindent0{\pntxtb\'B7}}\fi-360\li720\sa200\sl276\slmult1 Input: Valid patientName, clinicName, and bookingDate.\par
+{\pntext\f1\'B7\tab}Expected Result: Returns 200 OK with success message.\par
+{\pntext\f1\'B7\tab}result : Booking successful. Remaining slots: 19\par
+
+\pard\sa200\sl276\slmult1\par
+Invalid Input (Empty Patient Name):\par
+
+\pard{\pntext\f1\'B7\tab}{\*\pn\pnlvlblt\pnf1\pnindent0{\pntxtb\'B7}}\fi-360\li720\sa200\sl276\slmult1 Input: Empty or whitespace patientName.\par
+{\pntext\f1\'B7\tab}Expected Result: Returns 400 Bad Request with "Patient name is required."\par
+
+\pard{\pntext\f1\'B7\tab}{\*\pn\pnlvlblt\pnf1\pnindent0{\pntxtb\'B7}}\fi-360\li720\sa200\sl276\slmult1 Result :\par
+
+\pard\sa200\sl276\slmult1   "status": 400,\par
+  "errors": \{\par
+    "patientName": [\par
+      \cf1 "The patientName field is required."\cf0\par
+    ]\par
+
+\pard\sa200\sl276\slmult1 Invalid Input (Empty Clinic Name):\par
+
+\pard{\pntext\f1\'B7\tab}{\*\pn\pnlvlblt\pnf1\pnindent0{\pntxtb\'B7}}\fi-360\li720\sa200\sl276\slmult1 Input: Empty or whitespace clinicName.\par
+{\pntext\f1\'B7\tab}Expected Result: Returns 400 Bad Request with "Clinic name is required."\par
+
+\pard\sa200\sl276\slmult1 Error in Booking:\par
+
+\pard{\pntext\f1\'B7\tab}{\*\pn\pnlvlblt\pnf1\pnindent0{\pntxtb\'B7}}\fi-360\li720\sa200\sl276\slmult1 Input: Valid data but service returns an error (e.g., "No available slots").\par
+{\pntext\f1\'B7\tab}Expected Result: Returns 400 Bad Request with error message.\par
+
+\pard\sa200\sl276\slmult1\par
+\cf1\b GetByClinic\cf0\b0\par
+Valid Clinic:\par
+
+\pard{\pntext\f1\'B7\tab}{\*\pn\pnlvlblt\pnf1\pnindent0{\pntxtb\'B7}}\fi-360\li720\sa200\sl276\slmult1 Input: Valid clinicName.\par
+{\pntext\f1\'B7\tab}Expected Result: Returns 200 OK with a list of appointments.\par
+
+\pard\sa200\sl276\slmult1\par
+No Appointments Found:\par
+
+\pard{\pntext\f1\'B7\tab}{\*\pn\pnlvlblt\pnf1\pnindent0{\pntxtb\'B7}}\fi-360\li720\sa200\sl276\slmult1 Input: Valid clinicName but no appointments exist.\par
+{\pntext\f1\'B7\tab}Expected Result: Returns 404 Not Found with "No appointments found."\par
+
+\pard\sa200\sl276\slmult1\par
+Invalid Clinic Name:\par
+\par
+
+\pard{\pntext\f1\'B7\tab}{\*\pn\pnlvlblt\pnf1\pnindent0{\pntxtb\'B7}}\fi-360\li720\sa200\sl276\slmult1 Input: Empty or whitespace clinicName.\par
+{\pntext\f1\'B7\tab}Expected Result: Returns 400 Bad Request with "Clinic name is required."\par
+
+\pard\sa200\sl276\slmult1\cf1\b GetByPatient\cf0\b0\par
+Valid Patient:\par
+
+\pard{\pntext\f1\'B7\tab}{\*\pn\pnlvlblt\pnf1\pnindent0{\pntxtb\'B7}}\fi-360\li720\sa200\sl276\slmult1 Input: Valid patientName.\par
+{\pntext\f1\'B7\tab}Expected Result: Returns 200 OK with a list of appointments.\par
+
+\pard\sa200\sl276\slmult1\par
+No Appointments Found:\par
+
+\pard{\pntext\f1\'B7\tab}{\*\pn\pnlvlblt\pnf1\pnindent0{\pntxtb\'B7}}\fi-360\li720\sa200\sl276\slmult1 Input: Valid patientName but no appointments exist.\par
+{\pntext\f1\'B7\tab}Expected Result: Returns 404 Not Found with "No appointments found."\par
+
+\pard\sa200\sl276\slmult1 Invalid Patient Name:\par
+
+\pard{\pntext\f1\'B7\tab}{\*\pn\pnlvlblt\pnf1\pnindent0{\pntxtb\'B7}}\fi-360\li720\sa200\sl276\slmult1 Input: Empty or whitespace patientName.\par
+{\pntext\f1\'B7\tab}Expected Result: Returns 400 Bad Request with "Patient name is required."\par
+
+\pard\sa200\sl276\slmult1 2. AppointmentServices Test Scenarios\par
+AddBooking\par
+Valid Input:\par
+
+\pard{\pntext\f1\'B7\tab}{\*\pn\pnlvlblt\pnf1\pnindent0{\pntxtb\'B7}}\fi-360\li720\sa200\sl276\slmult1 Input: Valid patientName, clinicName, and bookingDate.\par
+{\pntext\f1\'B7\tab}Expected Result: Returns "Booking successful. Remaining slots: X."\par
+
+\pard\sa200\sl276\slmult1 Invalid Patient:\par
+
+\pard{\pntext\f1\'B7\tab}{\*\pn\pnlvlblt\pnf1\pnindent0{\pntxtb\'B7}}\fi-360\li720\sa200\sl276\slmult1 Input: Non-existent patientName.\par
+{\pntext\f1\'B7\tab}Expected Result: Returns "Invalid patient name."\par
+
+\pard\sa200\sl276\slmult1 Invalid Clinic:\par
+
+\pard{\pntext\f1\'B7\tab}{\*\pn\pnlvlblt\pnf1\pnindent0{\pntxtb\'B7}}\fi-360\li720\sa200\sl276\slmult1 Input: Non-existent clinicName.\par
+{\pntext\f1\'B7\tab}Expected Result: Returns "Invalid clinic name."\par
+
+\pard\sa200\sl276\slmult1 No Available Slots:\par
+
+\pard{\pntext\f1\'B7\tab}{\*\pn\pnlvlblt\pnf1\pnindent0{\pntxtb\'B7}}\fi-360\li720\sa200\sl276\slmult1 Input: Valid data but clinic has no slots available.\par
+{\pntext\f1\'B7\tab}Expected Result: Returns "No available slots in the clinic."\par
+
+\pard\sa200\sl276\slmult1 Duplicate Appointment:\par
+
+\pard{\pntext\f1\'B7\tab}{\*\pn\pnlvlblt\pnf1\pnindent0{\pntxtb\'B7}}\fi-360\li720\sa200\sl276\slmult1 Input: Valid data but patient already has an appointment on the same date.\par
+{\pntext\f1\'B7\tab}Expected Result: Returns "Patient already has an appointment in this clinic on the same day."\par
+
+\pard\sa200\sl276\slmult1\cf1\b ViewAppointmentByClinic\par
+\cf0\b0 Valid Clinic:\par
+
+\pard{\pntext\f1\'B7\tab}{\*\pn\pnlvlblt\pnf1\pnindent0{\pntxtb\'B7}}\fi-360\li720\sa200\sl276\slmult1 Input: Valid clinicName.\par
+{\pntext\f1\'B7\tab}Expected Result: Returns a list of appointments.\par
+
+\pard\sa200\sl276\slmult1 Invalid Clinic:\par
+
+\pard{\pntext\f1\'B7\tab}{\*\pn\pnlvlblt\pnf1\pnindent0{\pntxtb\'B7}}\fi-360\li720\sa200\sl276\slmult1 Input: Non-existent clinicName.\par
+{\pntext\f1\'B7\tab}Expected Result: Throws an error or returns an empty list.\par
+
+\pard\sa200\sl276\slmult1\cf1\b ViewAppointmentByPatient\cf0\b0\par
+Valid Patient:\par
+
+\pard{\pntext\f1\'B7\tab}{\*\pn\pnlvlblt\pnf1\pnindent0{\pntxtb\'B7}}\fi-360\li720\sa200\sl276\slmult1 Input: Valid patientName.\par
+{\pntext\f1\'B7\tab}Expected Result: Returns a list of appointments.\par
+
+\pard\sa200\sl276\slmult1 Invalid Patient:\par
+
+\pard{\pntext\f1\'B7\tab}{\*\pn\pnlvlblt\pnf1\pnindent0{\pntxtb\'B7}}\fi-360\li720\sa200\sl276\slmult1 Input: Non-existent patientName.\par
+{\pntext\f1\'B7\tab}Expected Result: Throws an error or returns an empty list.\par
+
+\pard\sa200\sl276\slmult1\par
+
+\pard\sa200\sl276\slmult1\par
+\par
+\par
+\par
+\par
+\par
+\par
+}
+ 
