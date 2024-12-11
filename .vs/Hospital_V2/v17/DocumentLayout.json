@@ -1,12 +1,224 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "C:\\Users\\Lenovo\\source\\repos\\Hospital_V2\\",
-  "Documents": [],
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{DD3F3E12-D825-4B36-A3B7-45D8BA8612BE}|Hospital_V2\\Hospital_V2.csproj|c:\\users\\lenovo\\source\\repos\\hospital_v2\\hospital_v2\\services\\patientservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DD3F3E12-D825-4B36-A3B7-45D8BA8612BE}|Hospital_V2\\Hospital_V2.csproj|solutionrelative:hospital_v2\\services\\patientservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DD3F3E12-D825-4B36-A3B7-45D8BA8612BE}|Hospital_V2\\Hospital_V2.csproj|c:\\users\\lenovo\\source\\repos\\hospital_v2\\hospital_v2\\services\\ipatientservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DD3F3E12-D825-4B36-A3B7-45D8BA8612BE}|Hospital_V2\\Hospital_V2.csproj|solutionrelative:hospital_v2\\services\\ipatientservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DD3F3E12-D825-4B36-A3B7-45D8BA8612BE}|Hospital_V2\\Hospital_V2.csproj|c:\\users\\lenovo\\source\\repos\\hospital_v2\\hospital_v2\\repositories\\patientrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DD3F3E12-D825-4B36-A3B7-45D8BA8612BE}|Hospital_V2\\Hospital_V2.csproj|solutionrelative:hospital_v2\\repositories\\patientrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DD3F3E12-D825-4B36-A3B7-45D8BA8612BE}|Hospital_V2\\Hospital_V2.csproj|c:\\users\\lenovo\\source\\repos\\hospital_v2\\hospital_v2\\controllers\\patientcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DD3F3E12-D825-4B36-A3B7-45D8BA8612BE}|Hospital_V2\\Hospital_V2.csproj|solutionrelative:hospital_v2\\controllers\\patientcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DD3F3E12-D825-4B36-A3B7-45D8BA8612BE}|Hospital_V2\\Hospital_V2.csproj|c:\\users\\lenovo\\source\\repos\\hospital_v2\\hospital_v2\\models\\booking.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DD3F3E12-D825-4B36-A3B7-45D8BA8612BE}|Hospital_V2\\Hospital_V2.csproj|solutionrelative:hospital_v2\\models\\booking.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DD3F3E12-D825-4B36-A3B7-45D8BA8612BE}|Hospital_V2\\Hospital_V2.csproj|c:\\users\\lenovo\\source\\repos\\hospital_v2\\hospital_v2\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{DD3F3E12-D825-4B36-A3B7-45D8BA8612BE}|Hospital_V2\\Hospital_V2.csproj|solutionrelative:hospital_v2\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Lenovo\\source\\repos\\Hospital_V2\\Hospital_V2\\Migrations\\20241211060925_neww.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Hospital_V2\\Migrations\\20241211060925_neww.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DD3F3E12-D825-4B36-A3B7-45D8BA8612BE}|Hospital_V2\\Hospital_V2.csproj|c:\\users\\lenovo\\source\\repos\\hospital_v2\\hospital_v2\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DD3F3E12-D825-4B36-A3B7-45D8BA8612BE}|Hospital_V2\\Hospital_V2.csproj|solutionrelative:hospital_v2\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DD3F3E12-D825-4B36-A3B7-45D8BA8612BE}|Hospital_V2\\Hospital_V2.csproj|c:\\users\\lenovo\\source\\repos\\hospital_v2\\hospital_v2\\hospital_v2.http||{5703B403-55E7-4C63-8C88-A8F52C7A45C5}",
+      "RelativeMoniker": "D:0:0:{DD3F3E12-D825-4B36-A3B7-45D8BA8612BE}|Hospital_V2\\Hospital_V2.csproj|solutionrelative:hospital_v2\\hospital_v2.http||{5703B403-55E7-4C63-8C88-A8F52C7A45C5}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DD3F3E12-D825-4B36-A3B7-45D8BA8612BE}|Hospital_V2\\Hospital_V2.csproj|c:\\users\\lenovo\\source\\repos\\hospital_v2\\hospital_v2\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DD3F3E12-D825-4B36-A3B7-45D8BA8612BE}|Hospital_V2\\Hospital_V2.csproj|solutionrelative:hospital_v2\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DD3F3E12-D825-4B36-A3B7-45D8BA8612BE}|Hospital_V2\\Hospital_V2.csproj|c:\\users\\lenovo\\source\\repos\\hospital_v2\\hospital_v2\\models\\clinic.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DD3F3E12-D825-4B36-A3B7-45D8BA8612BE}|Hospital_V2\\Hospital_V2.csproj|solutionrelative:hospital_v2\\models\\clinic.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DD3F3E12-D825-4B36-A3B7-45D8BA8612BE}|Hospital_V2\\Hospital_V2.csproj|c:\\users\\lenovo\\source\\repos\\hospital_v2\\hospital_v2\\models\\patient.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DD3F3E12-D825-4B36-A3B7-45D8BA8612BE}|Hospital_V2\\Hospital_V2.csproj|solutionrelative:hospital_v2\\models\\patient.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
       "VerticalTabListWidth": 256,
-      "DocumentGroups": []
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "IPatientService.cs",
+              "DocumentMoniker": "C:\\Users\\Lenovo\\source\\repos\\Hospital_V2\\Hospital_V2\\Services\\IPatientService.cs",
+              "RelativeDocumentMoniker": "Hospital_V2\\Services\\IPatientService.cs",
+              "ToolTip": "C:\\Users\\Lenovo\\source\\repos\\Hospital_V2\\Hospital_V2\\Services\\IPatientService.cs",
+              "RelativeToolTip": "Hospital_V2\\Services\\IPatientService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-11T06:40:17.987Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "PatientService.cs",
+              "DocumentMoniker": "C:\\Users\\Lenovo\\source\\repos\\Hospital_V2\\Hospital_V2\\Services\\PatientService.cs",
+              "RelativeDocumentMoniker": "Hospital_V2\\Services\\PatientService.cs",
+              "ToolTip": "C:\\Users\\Lenovo\\source\\repos\\Hospital_V2\\Hospital_V2\\Services\\PatientService.cs",
+              "RelativeToolTip": "Hospital_V2\\Services\\PatientService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAzAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-11T06:30:23.727Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "PatientController.cs",
+              "DocumentMoniker": "C:\\Users\\Lenovo\\source\\repos\\Hospital_V2\\Hospital_V2\\Controllers\\PatientController.cs",
+              "RelativeDocumentMoniker": "Hospital_V2\\Controllers\\PatientController.cs",
+              "ToolTip": "C:\\Users\\Lenovo\\source\\repos\\Hospital_V2\\Hospital_V2\\Controllers\\PatientController.cs",
+              "RelativeToolTip": "Hospital_V2\\Controllers\\PatientController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAATAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-11T06:37:59.667Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "PatientRepository.cs",
+              "DocumentMoniker": "C:\\Users\\Lenovo\\source\\repos\\Hospital_V2\\Hospital_V2\\Repositories\\PatientRepository.cs",
+              "RelativeDocumentMoniker": "Hospital_V2\\Repositories\\PatientRepository.cs",
+              "ToolTip": "C:\\Users\\Lenovo\\source\\repos\\Hospital_V2\\Hospital_V2\\Repositories\\PatientRepository.cs",
+              "RelativeToolTip": "Hospital_V2\\Repositories\\PatientRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-11T06:23:31.363Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "20241211060925_neww.cs",
+              "DocumentMoniker": "C:\\Users\\Lenovo\\source\\repos\\Hospital_V2\\Hospital_V2\\Migrations\\20241211060925_neww.cs",
+              "RelativeDocumentMoniker": "Hospital_V2\\Migrations\\20241211060925_neww.cs",
+              "ToolTip": "C:\\Users\\Lenovo\\source\\repos\\Hospital_V2\\Hospital_V2\\Migrations\\20241211060925_neww.cs",
+              "RelativeToolTip": "Hospital_V2\\Migrations\\20241211060925_neww.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAgAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-11T06:09:25.898Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Booking.cs",
+              "DocumentMoniker": "C:\\Users\\Lenovo\\source\\repos\\Hospital_V2\\Hospital_V2\\Models\\Booking.cs",
+              "RelativeDocumentMoniker": "Hospital_V2\\Models\\Booking.cs",
+              "ToolTip": "C:\\Users\\Lenovo\\source\\repos\\Hospital_V2\\Hospital_V2\\Models\\Booking.cs",
+              "RelativeToolTip": "Hospital_V2\\Models\\Booking.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAcAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-11T05:54:20.517Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "Hospital_V2.http",
+              "DocumentMoniker": "C:\\Users\\Lenovo\\source\\repos\\Hospital_V2\\Hospital_V2\\Hospital_V2.http",
+              "RelativeDocumentMoniker": "Hospital_V2\\Hospital_V2.http",
+              "ToolTip": "C:\\Users\\Lenovo\\source\\repos\\Hospital_V2\\Hospital_V2\\Hospital_V2.http",
+              "RelativeToolTip": "Hospital_V2\\Hospital_V2.http",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003502|",
+              "WhenOpened": "2024-12-11T06:01:40.902Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\Lenovo\\source\\repos\\Hospital_V2\\Hospital_V2\\Program.cs",
+              "RelativeDocumentMoniker": "Hospital_V2\\Program.cs",
+              "ToolTip": "C:\\Users\\Lenovo\\source\\repos\\Hospital_V2\\Hospital_V2\\Program.cs",
+              "RelativeToolTip": "Hospital_V2\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAeAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-11T05:55:01.18Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\Lenovo\\source\\repos\\Hospital_V2\\Hospital_V2\\appsettings.json",
+              "RelativeDocumentMoniker": "Hospital_V2\\appsettings.json",
+              "ToolTip": "C:\\Users\\Lenovo\\source\\repos\\Hospital_V2\\Hospital_V2\\appsettings.json",
+              "RelativeToolTip": "Hospital_V2\\appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2024-12-11T05:48:54.212Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "ApplicationDbContext.cs",
+              "DocumentMoniker": "C:\\Users\\Lenovo\\source\\repos\\Hospital_V2\\Hospital_V2\\ApplicationDbContext.cs",
+              "RelativeDocumentMoniker": "Hospital_V2\\ApplicationDbContext.cs",
+              "ToolTip": "C:\\Users\\Lenovo\\source\\repos\\Hospital_V2\\Hospital_V2\\ApplicationDbContext.cs",
+              "RelativeToolTip": "Hospital_V2\\ApplicationDbContext.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-11T05:45:10.522Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "Clinic.cs",
+              "DocumentMoniker": "C:\\Users\\Lenovo\\source\\repos\\Hospital_V2\\Hospital_V2\\Models\\Clinic.cs",
+              "RelativeDocumentMoniker": "Hospital_V2\\Models\\Clinic.cs",
+              "ToolTip": "C:\\Users\\Lenovo\\source\\repos\\Hospital_V2\\Hospital_V2\\Models\\Clinic.cs",
+              "RelativeToolTip": "Hospital_V2\\Models\\Clinic.cs",
+              "ViewState": "AgIAAAgAAAAAAAAAAAAQwAIAAAAkAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-11T05:42:21.112Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "Patient.cs",
+              "DocumentMoniker": "C:\\Users\\Lenovo\\source\\repos\\Hospital_V2\\Hospital_V2\\Models\\Patient.cs",
+              "RelativeDocumentMoniker": "Hospital_V2\\Models\\Patient.cs",
+              "ToolTip": "C:\\Users\\Lenovo\\source\\repos\\Hospital_V2\\Hospital_V2\\Models\\Patient.cs",
+              "RelativeToolTip": "Hospital_V2\\Models\\Patient.cs",
+              "ViewState": "AgIAAAgAAAAAAAAAAAAQwA4AAAApAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-11T05:41:51.397Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
     }
   ]
 }
