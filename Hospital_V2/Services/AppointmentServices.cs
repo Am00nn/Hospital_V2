@@ -19,79 +19,108 @@ namespace Hospital_V2.Services
 
             _patientRepository = patientRepository;
         }
+
         public string AddBooking(string patientName, string clinicName, DateTime bookingDate)
         {
-            // Find patient and clinic using LINQ
-            var patient = _patientRepository.GetPatients()
-                .FirstOrDefault(p => p.P_Name.Equals(patientName, StringComparison.OrdinalIgnoreCase));
-
-            var clinic = _clinicRepository.GetClinics()
-                .FirstOrDefault(c => c.C_Name.Equals(clinicName, StringComparison.OrdinalIgnoreCase));
-
-            // Validate patient and clinic
-            if (patient == null)
-                return "Invalid patient name.";
-
-            if (clinic == null)
-                return "Invalid clinic name.";
-
-            // Check if patient already has an appointment on the same date
-            var existingAppointment = _bookingRepository.ViewAppointmentByPatient(patient.P_Id)
-                .Any(b => b.BookingDate.Date == bookingDate.Date && b.ClinicId == clinic.CID);
-
-            if (existingAppointment)
-                return "Patient already has an appointment in this clinic on the same day.";
-
-            // Check if the clinic has available slots
-            if (clinic.NumberOfSlots <= 0)
-                return "No available slots in the clinic.";
-
-            // Create and save the new booking
-            var booking = new Booking
+            try
             {
-                PatientId = patient.P_Id,
-                ClinicId = clinic.CID,
-                BookingDate = bookingDate
-            };
+                // Find patient and clinic using LINQ
 
-            _bookingRepository.BookAppointment(booking);
+                var patient = _patientRepository.GetPatients()
+                    .FirstOrDefault(p => p.P_Name.Equals(patientName, StringComparison.OrdinalIgnoreCase));
 
-            // Update the clinic's available slots
-            clinic.NumberOfSlots -= 1;
-            _clinicRepository.UpdateClinic(clinic);
+                var clinic = _clinicRepository.GetClinics()
+                    .FirstOrDefault(c => c.C_Name.Equals(clinicName, StringComparison.OrdinalIgnoreCase));
 
-            return $"Booking successful. Remaining slots: {clinic.NumberOfSlots}";
+                // Validate patient and clinic
+
+                if (patient == null)
+                    return "Invalid patient name.";
+
+                if (clinic == null)
+                    return "Invalid clinic name.";
+
+                // Check if patient already has an appointment on the same date
+
+                var existingAppointment = _bookingRepository.ViewAppointmentByPatient(patient.P_Id)
+                    .Any(b => b.BookingDate.Date == bookingDate.Date && b.ClinicId == clinic.CID);
+
+                if (existingAppointment)
+                    return "Patient already has an appointment in this clinic on the same day.";
+
+                // Check if the clinic has available slots
+
+                if (clinic.NumberOfSlots <= 0)
+                    return "No available slots in the clinic.";
+
+                // Create and save the new booking
+                var booking = new Booking
+                {
+                    PatientId = patient.P_Id,
+                    ClinicId = clinic.CID,
+                    BookingDate = bookingDate
+                };
+
+                _bookingRepository.BookAppointment(booking);
+
+                // Update the clinic's available slots
+
+                clinic.NumberOfSlots -= 1;
+
+                _clinicRepository.UpdateClinic(clinic);
+
+                return $"Booking successful. Remaining slots: {clinic.NumberOfSlots}";
+            }
+            catch (Exception ex)
+            {
+                // Handle unexpected errors
+
+                return $"An error occurred while booking the appointment: {ex.Message}";
+            }
         }
-
-
 
         public IEnumerable<Booking> ViewAppointmentByClinic(string clinicName)
         {
-            var clinic = _clinicRepository.GetClinics()
-
-                .FirstOrDefault(c => c.C_Name.Equals(clinicName, StringComparison.OrdinalIgnoreCase));
-
-            if (clinic == null)
+            try
             {
-                return Enumerable.Empty<Booking>();
-            }
+                var clinic = _clinicRepository.GetClinics()
+                    .FirstOrDefault(c => c.C_Name.Equals(clinicName, StringComparison.OrdinalIgnoreCase));
 
-            return _bookingRepository.ViewAppointmentByClinic(clinic.CID);
+                if (clinic == null)
+                {
+                    return Enumerable.Empty<Booking>(); // Return empty if clinic not found
+                }
+
+                return _bookingRepository.ViewAppointmentByClinic(clinic.CID);
+            }
+            catch (Exception ex)
+            {
+                // Handle unexpected errors
+
+                throw new InvalidOperationException($"An error occurred while retrieving appointments: {ex.Message}");
+            }
         }
 
         public IEnumerable<Booking> ViewAppointmentByPatient(string patientName)
         {
-            var patient = _patientRepository.GetPatients()
-
-                .FirstOrDefault(p => p.P_Name.Equals(patientName, StringComparison.OrdinalIgnoreCase));
-
-            if (patient == null)
+            try
             {
+                var patient = _patientRepository.GetPatients()
+                    .FirstOrDefault(p => p.P_Name.Equals(patientName, StringComparison.OrdinalIgnoreCase));
 
-                return Enumerable.Empty<Booking>();
+                if (patient == null)
+                {
+                    return Enumerable.Empty<Booking>(); // Return empty if patient not found
+                }
+
+                return _bookingRepository.ViewAppointmentByPatient(patient.P_Id);
             }
+            catch (Exception ex)
+            {
+                // Handle unexpected errors
 
-            return _bookingRepository.ViewAppointmentByPatient(patient.P_Id);
+                throw new InvalidOperationException($"An error occurred while retrieving patient appointments: {ex.Message}");
+            }
         }
     }
 }
